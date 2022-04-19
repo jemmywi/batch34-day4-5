@@ -1,0 +1,136 @@
+<html>
+
+<head>
+  <title>Creating Blog Page</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- NavBar -->
+  <nav>
+    <div class="left-side">
+        <a href="index.html">
+            <img src="assets/img/logo.png" alt="">
+        </a>
+        <ol>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="blog.html">My Project</a>
+            </li>
+        </ol>
+    </div>
+
+    <div class="right-side">
+        <a href="contact.html">Contact Me</a>
+    </div>
+</nav>
+
+  <!-- Blog -->
+  <!-- Form -->
+  <div class="blog">
+    <div class="blog-form">
+      <div class="form-container">
+        <form onsubmit="addBlog(event)">
+          <div class="blog-title">
+          <h1>Create Post Blog</h1>
+          </div>
+          <div>
+            <label for="input-blog-title">Project Name</label>
+            <input id="input-blog-title" />
+          </div>
+          <div class="blog-date">
+            <label for="startDate">Start Date</label>
+            <input id="startDate" type="date">
+            <label for="endDate">End Date</label>
+            <input id="endDate" type="date">
+        </div>
+          <div>
+            <label for="input-blog-content">Description</label>
+            <textarea id="input-blog-content"></textarea>
+          </div>
+          <div class="checkbox">    
+            <label>Technologies</label>
+          </div>
+              <div class="checbox-left">  
+                <div> <input type="checkbox">
+                  <label for="nodeJs" type="checkbox"  id="nodeJs" name="nodeJs">Node Js</label>
+                </div>
+                <div>
+                   <input type="checkbox" id="nextJs" name="nextJs">
+                  <label for="nextJs" type="checkbox">Next Js</label>
+                </div>
+              </div>
+              <div class="checkbox-right">
+                <div>
+                  <input type="checkbox" id="reactJs" name="reactJs">
+                  <label for="reactJs" type="checkbox">React Js</label>
+                </div>                  
+                  <div>
+                    <input type="checkbox" id="typeScript" name="typeScript">
+                    <label for="typeScript" type="checkbox">TypeScript</label>
+                  </div>
+          </div>
+          <div>
+            <label>Upload Image</label>
+            <div class="input-blog-image-group">
+              <label for="input-blog-image">
+                <p>Attach File</p>
+                <img src="assets/img/file.png" alt="file" />
+              </label>
+              <input type="file" id="input-blog-image" hidden />
+            </div>
+          </div>
+          <div class="button-group">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="test">
+    </div>
+    <hr class="line" />
+
+    <!-- List Blog -->
+    <div id="contents" class="blog-list">
+      <div class="blog-list-title">
+        <h1>MY PROJECT</h1>
+      </div>
+
+      <!-- dynamic content would be here -->
+      <div class="list">
+        <div class="list-img">
+          <img src="assets/img/foto1.jpg"/>
+        </div>
+        <div class="list-title">
+          <h6>Dumbways mobile App - 2021</h6>
+        </div>
+        <div class="list-time">
+          <span style="font-size: 15px; color: grey;">1 hour ago</span>
+        </div>
+        <div class="list-contain">
+          <p> Lorem ipsum dolor sit amet.
+          </p>
+        </div>
+        <div>
+          <img src="assets\img\linkedin.png" style="height: 30px; height: 27px; margin-right: 10px;">
+          <img src="assets\img\instagram.png" style="height: 30px; height: 27px; margin-right: 10px;">
+          <img src="assets\img\facebook.png" style="height: 30px; height: 27px; margin-right: 10px;">
+      </div>
+      <div class="list-parent">
+        <div>
+          <button type="button">edit</button>
+        </div>
+        <div>
+          <button type="button">delete</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <script src="blog.js"></script>
+</body>
+
+</html>
